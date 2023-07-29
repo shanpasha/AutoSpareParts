@@ -45,8 +45,8 @@ public class SparePartController {
 	@PostMapping("/save")
 	public ResponseEntity<?> save(@RequestBody SpareParts sparePart) {
 
-		Vechicle v2 = vechileServ.getByVechileId(sparePart.getVechicle().getVehicleId());
-		sparePart.setVechicle(v2);
+		Vechicle v2 = vechileServ.getByVechileId(sparePart.getVehicle().getVehicleId());
+		sparePart.setVehicle(v2);;
 		serv.addpart(sparePart);
 		return new ResponseEntity<>(HttpStatus.OK).ok(sparePart);
 	}

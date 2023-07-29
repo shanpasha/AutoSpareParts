@@ -25,7 +25,7 @@ public class Role {
 		
 		@ManyToMany(mappedBy = "roles")
 	@JsonIgnoreProperties("roles")
-//		@ToString.Exclude
+		@ToString.Exclude
 	private List<User> users;
 
 	

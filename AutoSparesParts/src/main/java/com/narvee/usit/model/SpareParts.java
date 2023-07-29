@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString.Exclude;
 
 @Entity
 @Data
@@ -42,6 +43,7 @@ public class SpareParts {
 	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
 	@JoinColumn(name = "vehicleId")
 	@JsonIgnoreProperties("sparePart")
-	private Vechicle vechicle;
+	@Exclude
+	private Vechicle vehicle;
 
 }

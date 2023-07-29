@@ -35,9 +35,10 @@ public class Vechicle {
 	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
 	@JoinColumn(name = "roomId")
 	@JsonIgnoreProperties("room")
+	
 	private Room room;
 
-	@OneToMany(mappedBy = "vechicle")
-	@JsonIgnoreProperties("vechicle")
+	@OneToMany(mappedBy = "vehicle")
+	@JsonIgnoreProperties("vehicle")
 	private List<SpareParts> sparePart;
 }
