@@ -22,7 +22,7 @@ public class RoleMvcController {
 	
 	@GetMapping("/addRole")
 	public String addRole(Role role) {
-		return "GetRoles";
+		return "Role";
 	}
 	
 	@PostMapping("/saveRole")

@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString.Exclude;
 
 @Entity
 @Data
@@ -29,6 +30,7 @@ public class Room {
 		 private String address;
 		 @OneToMany(mappedBy = "room")
 		@JsonIgnoreProperties("room")
+		 @Exclude
 		 private List<Vechicle> vechile;
 	
 	

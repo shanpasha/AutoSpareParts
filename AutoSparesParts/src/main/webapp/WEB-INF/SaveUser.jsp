@@ -21,7 +21,7 @@
 <input type="text" name="mobile" placeholder="Mobile Number">
 <input type="text" name="department" placeholder="Department"><br>
  
- <c:forEach items="${ Roles}" var="role">
+ <c:forEach items="${Roles}" var="role">
  <input type="checkbox" value="${role.roleId }" name="roles">${role.roleName }"</input>
  
  

@@ -44,6 +44,7 @@ public class UserMvcController {
 		}
 		user.setRoles(roles);
 		userServ.addUser(user);
+		System.out.println(user);
 		return "redirect:/getAllUsers";
 		
 	}
